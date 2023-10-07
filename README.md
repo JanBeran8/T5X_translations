@@ -1,7 +1,7 @@
 # T5X_translations
 The project's primary objective is to replicate the capabilities of T5X, a cutting-edge framework designed for high-performance sequence model tasks, with a specific emphasis on language translation. 
 
-###Časová osa
+### Časová osa
 - [ ] přiřazení osob, linky na github, data vystoupení (17.10.2023)
 - [ ] poslední vystoupení (11.12.2023)
 - [ ] náhradní termíny (3.1.,8.1.)
