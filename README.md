@@ -16,4 +16,5 @@ It is essentially a new and improved implementation of the T5 codebase (based on
 
 Below is a quick start guide for training models with TPUs on Google Cloud. For additional tutorials and background, see the complete documentation.
 
-### 1.1 Installing XManager  
+### Progresses
+- [ ] 1.1 Installing XManager  
