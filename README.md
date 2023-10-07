@@ -15,3 +15,5 @@ T5X is a modular, composable, research-friendly framework for high-performance, 
 It is essentially a new and improved implementation of the T5 codebase (based on Mesh TensorFlow) in JAX and Flax. To learn more, see the T5X Paper.
 
 Below is a quick start guide for training models with TPUs on Google Cloud. For additional tutorials and background, see the complete documentation.
+
+### 1.1 Installing XManager  
