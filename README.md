@@ -18,3 +18,4 @@ Below is a quick start guide for training models with TPUs on Google Cloud. For 
 
 ### Progresses
 - [ ] 1.1 Installing XManager  
+- [ ] 1.2 Google Cloud Platform (GCP)  
