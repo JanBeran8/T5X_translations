@@ -19,7 +19,11 @@ s lokálním spuštěním problémy s XManager, problémy s připojením na Goog
            ```
             storage_client = storage.Client.from_service_account_json('my-project-1-401520-40f92252df59.json')
           ```
-
+  </br> ✅ Import knihoven TensorFlow pro strojové učení
+    ```
+    import tensorflow as tf
+    import tensorflow_datasets as tfds
+    ```
 
 ❌
 
