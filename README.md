@@ -9,17 +9,17 @@ The project's primary objective is to replicate the capabilities of T5X, a cutti
 
 ### Postup:
 
-- [ ]
-- [ ]
-- [ ]
-- [ ]
-- [ ]
+- [ ] d
+- [ ] d
+- [ ] d
+- [ ] d
+- [ ] d
 
 
-- [ ]
-- [ ]
-- [ ]
-- [ ]
+- [ ] d 
+- [ ] d
+- [ ] d
+- [ ] d
 
 
 
