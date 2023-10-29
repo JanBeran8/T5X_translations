@@ -21,11 +21,11 @@ s lokálním spuštěním problémy s XManager, problémy s připojením na Goog
           ```
   </br> ✅ Import knihoven TensorFlow pro strojové učení</br>
     ```
-    import tensorflow as tf
+        import tensorflow as tf
      ```
     </br> 
      ```
-    import tensorflow_datasets as tfds</br>
+        import tensorflow_datasets as tfds</br>
     ```
 
 ❌
