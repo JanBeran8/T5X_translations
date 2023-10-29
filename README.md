@@ -6,6 +6,7 @@ The project's primary objective is to replicate the capabilities of T5X, a cutti
 - [ ] poslední vystoupení (11.12.2023)
 - [ ] náhradní termíny (3.1.,8.1.)
 - [ ] udělování KZ (11.1)
+- [x] 
 
 # T5X
 Link: https://github.com/google-research/t5x </br>
