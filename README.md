@@ -9,18 +9,11 @@ The project's primary objective is to replicate the capabilities of T5X, a cutti
 
 
 ### Postup (Google Colab):
- - s lokálním spuštěním problémy s XManager, problémy s připojením na Google Cloud
-- [ ] d
-- [ ] d
-- [ ] d
-- [ ] d
-- [ ] d
+ s lokálním spuštěním problémy s XManager, problémy s připojením na Google Cloud
+   Autentizace v Google Colab 
+   Naklonování repozitářů 
+❌
 
-
-- [ ] d 
-- [ ] d
-- [ ] d
-- [ ] d
 
 
 
