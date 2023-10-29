@@ -25,11 +25,18 @@ s lokálním spuštěním problémy s XManager, problémy s připojením na Goog
      ```
     </br> 
      ```
-        import tensorflow_datasets as tfds</br>
+        import tensorflow_datasets as tfds
     ```
 
-❌
 
+
+  </br> ❌
+ </br> ❌
+  </br> ❌
+   </br> ❌
+    </br> ❌
+     </br> ❌
+      </br> ❌
 
 
 
