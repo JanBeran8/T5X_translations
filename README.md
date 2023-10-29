@@ -37,6 +37,15 @@ s lokálním spuštěním problémy s XManager, problémy s připojením na Goog
           ```
           </br>
 
+</br> ✅ Import datasetu ***wmt_t2t_translate/de-en*** </br>
+          ```
+          dataset_name = "wmt_t2t_translate"
+          ```
+          </br>
+          ```
+          dataset, info = tfds.load(dataset_name, with_info=True, data_dir="/drive/MyDrive/dataset/wmt_t2t_translate/de-en")
+          ```
+          </br>
   </br> ❌
  </br> ❌
   </br> ❌
