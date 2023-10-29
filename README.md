@@ -35,8 +35,6 @@ s lokálním spuštěním problémy s XManager, problémy s připojením na Goog
           ```
           env: TPU_ADDRESS=grpc://10.45.163.2:8470
           ```
-          </br>
-
 </br> ✅ Import datasetu ***wmt_t2t_translate/de-en*** </br>
           ```
           dataset_name = "wmt_t2t_translate"
