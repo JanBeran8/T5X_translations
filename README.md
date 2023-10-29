@@ -7,8 +7,9 @@ The project's primary objective is to replicate the capabilities of T5X, a cutti
 - [ ] náhradní termíny (3.1.,8.1.)
 - [ ] udělování KZ (11.1)
 
-### Postup:
 
+### Postup (Google Colab):
+ - s lokálním spuštěním problémy s XManager, rpoblémy s připojením na Google Cloud
 - [ ] d
 - [ ] d
 - [ ] d
