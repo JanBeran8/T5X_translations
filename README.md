@@ -14,7 +14,10 @@ s lokálním spuštěním problémy s XManager, problémy s připojením na Goog
  </br>  ✅ Naklonování repozitářů https://github.com/google-research/t5x a https://github.com/google-research/text-to-text-transfer-transformer - bez problémů
  </br>  ✅ Instalace knihoven z repozitářů - bylo potřeba nainstalovat jiné verze -> requirements.txt
  </br>  ✅ Založení účtu na Google Cloud (Console) -> vytvoření servisního účtu -> vygenerování SERVICE ACCOUNT KEY - cesta ke klíči: gs://test_bucket-1128/my-project-1-401520-40f92252df59.json 
-
+ </br>  ✅ Přihlášení v Google Colab ke Google Cloud Storage (GCS) pomocí service account key
+           ```
+            storage_client = storage.Client.from_service_account_json('my-project-1-401520-40f92252df59.json')
+          ```
 
 
 ❌
