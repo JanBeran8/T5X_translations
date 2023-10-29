@@ -29,10 +29,6 @@ s lokálním spuštěním problémy s XManager, problémy s připojením na Goog
     ```
 </br> ✅ Přístup ke Google Cloud Storage </br>
           ```
-          Setting up GCS access...
-          ```
-          </br>
-          ```
           Running on TPU: grpc://10.45.163.2:8470
           ```
           </br>
