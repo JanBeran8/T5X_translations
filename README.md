@@ -7,7 +7,7 @@ The project's primary objective is to replicate the capabilities of T5X, a cutti
 - [ ] náhradní termíny (3.1.,8.1.)
 - [ ] udělování KZ (11.1)
 
-### Tento repozitář popisuje neúspěšný pokus o zprovoznění projektu, který pomocí natrénovaného modelu na AI dokáže překládat datasets.
+#### Tento repozitář popisuje neúspěšný pokus o zprovoznění projektu, který pomocí natrénovaného modelu na AI dokáže překládat datasets.
 
 
 ### Postup (Google Colab):
