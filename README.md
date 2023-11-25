@@ -10,7 +10,7 @@ The project's primary objective is to replicate the capabilities of T5X, a cutti
 #### Tento repozitář popisuje neúspěšný pokus o zprovoznění projektu, který pomocí natrénovaného modelu na AI dokáže překládat datasets.
 
 
-### Postup (Google Colab):
+### Google Colab:
 s lokálním spuštěním problémy s XManager, problémy s připojením na Google Cloud </br>
   </br> ✅ Autentizace v Google Colab - bez problémů
  </br>  ✅ Naklonování repozitářů https://github.com/google-research/t5x a https://github.com/google-research/text-to-text-transfer-transformer - bez problémů
