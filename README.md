@@ -11,7 +11,7 @@ The project's primary objective is to replicate the capabilities of T5X, a cutti
 
 
 ### Google Colab:
-s lokálním spuštěním problémy s XManager, problémy s připojením na Google Cloud </br>
+"s lokálním spuštěním problémy s XManager, problémy s připojením na Google Cloud </br>"
   </br> ✅ Autentizace v Google Colab - bez problémů
  </br>  ✅ Naklonování repozitářů https://github.com/google-research/t5x a https://github.com/google-research/text-to-text-transfer-transformer - bez problémů
  </br>  ✅ Instalace knihoven z repozitářů - bylo potřeba nainstalovat jiné verze -> requirements.txt
