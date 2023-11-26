@@ -23,6 +23,7 @@ Below is a quick start guide for training models with TPUs on Google Cloud. For 
 </br>
 
 ## Řešení: 
+1) Naklonování repozitáře ```https://github.com/google-research/t5x.git```
 
 ### Chyby při lokálním spuštění: 
 - neúplná dokumentace
