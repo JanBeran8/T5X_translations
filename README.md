@@ -17,7 +17,7 @@ Below is a quick start guide for training models with TPUs on Google Cloud. For 
 - [ ] náhradní termíny (3.1.,8.1.)
 - [ ] udělování KZ (11.1)
 
-#### Tento repozitář popisuje neúspěšný pokus o zprovoznění projektu, který pomocí natrénovaného modelu na AI dokáže překládat datasets.
+#### Tento repozitář popisuje neúspěšný pokus o spuštění inference na již natrénovaném T5 modelu s datovou sadou v TensorFlow "wmt_t2t_translate".
  #### ❌ Google Colab .ipynb 
   #### ❌ Lokálně
 </br>
