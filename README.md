@@ -8,8 +8,8 @@ The project's primary objective is to replicate the capabilities of T5X, a cutti
 - [ ] udělování KZ (11.1)
 
 #### Tento repozitář popisuje neúspěšný pokus o zprovoznění projektu, který pomocí natrénovaného modelu na AI dokáže překládat datasets.
- #####</br> ❌ Test v Google Colab .ipynb 
- #####</br> ❌ Test lokálně
+ ##### </br> ❌ Test v Google Colab .ipynb 
+ ##### </br> ❌ Test lokálně
 
 ### Google Colab:
 "s lokálním spuštěním problémy s XManager, problémy s připojením na Google Cloud </br>"
