@@ -24,7 +24,7 @@ Below is a quick start guide for training models with TPUs on Google Cloud. For 
 
 ## Řešení: 
 
-### Chyby: 
+### Chyby při lokálním spuštění: 
 - neúplná dokumentace
 - chybějící modul - ``` t5x.infer_unfragmented ```, který slouží ke spuštění inference, došlo k jeho smazání z repozitáře
 - 
