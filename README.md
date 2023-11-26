@@ -20,8 +20,9 @@ Below is a quick start guide for training models with TPUs on Google Cloud. For 
 #### Tento repozitář popisuje neúspěšný pokus o zprovoznění projektu, který pomocí natrénovaného modelu na AI dokáže překládat datasets.
  #### ❌ Google Colab .ipynb 
   #### ❌ Lokálně
+</br>
 
-### Řešení: 
+## Řešení: 
 
 
 
