@@ -22,8 +22,14 @@ Below is a quick start guide for training models with TPUs on Google Cloud. For 
   #### ❌ Lokálně
 </br>
 
-## Řešení: 
-1) Naklonování repozitáře ```git clone https://github.com/google-research/t5x.git```
+## Postup: 
+Naklonování repozitáře ```git clone https://github.com/google-research/t5x.git``` ✅
+
+#### Krok 1: Vyberte model
+Pro spuštění inference na modelu potřebujete soubor konfigurace Gin, který definuje parametry modelu a cestu k jeho kontrolnímu bodu. Pro tento příklad použijeme model T5-1.1-Small, který byl jemně naladěn na úloze natural_questions_open_test SeqIO:
+
+- Cesta k kontrolnímu bodu modelu: cbqa/small_ssm_nq/model.ckpt-1110000
+- Soubor konfigurace modelu (Gin): models/t5_1_1_small.gin
 
 ### Chyby při lokálním spuštění: 
 - neúplná dokumentace
