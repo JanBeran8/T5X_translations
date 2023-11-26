@@ -24,6 +24,15 @@ Below is a quick start guide for training models with TPUs on Google Cloud. For 
 
 ## Řešení: 
 
+### Chyby: 
+- neúplná dokumentace
+- chybějící moduly - např. **t5x.infer_unfragmented**, který slouží ke spuštění inference, došlo k jeho smazání z repozitáře
+- 
+
+
+
+
+
 
 
 ### Google Colab:
