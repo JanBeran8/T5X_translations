@@ -1,5 +1,5 @@
-# T5X_translations
-The project's primary objective is to replicate the capabilities of T5X, a cutting-edge framework designed for high-performance sequence model tasks, with a specific emphasis on language translation. 
+# Running inference on a Model
+The goal of this repository should be to verify the functionality of the already trained T5 model on the given dataset. We will use the raw dataset that is available in TensorFlow Datasets as "wmt_t2t_translate".
 
 # T5X
 Link: https://github.com/google-research/t5x </br>
