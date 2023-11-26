@@ -21,6 +21,10 @@ Below is a quick start guide for training models with TPUs on Google Cloud. For 
  #### ❌ Google Colab .ipynb 
   #### ❌ Lokálně
 
+### Řešení: 
+
+
+
 ### Google Colab:
 "s lokálním spuštěním problémy s XManager, problémy s připojením na Google Cloud </br>"
   </br> ✅ Autentizace v Google Colab - bez problémů
