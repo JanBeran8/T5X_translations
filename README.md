@@ -54,16 +54,144 @@ books["train"][0]
  'translation': {'en': '“Why, Friday,” says I, “do you think they are going to eat them, then?” “Yes,” says Friday, “they will eat them.”',
   'fr': "Je pus distinguer que l'un de ces trois faisait les gestes les plus passionnés, des gestes d'imploration, de douleur et de désespoir, allant jusqu'à une sorte d'extravagance."}}
 
-The next step is to load a T5 tokenizer to process the English-French language pairs:
+Load a T5 tokenizer to process the English-French language pairs:
+```
+from transformers import AutoTokenizer
+
+checkpoint = "t5-small"
+tokenizer = AutoTokenizer.from_pretrained(checkpoint)
+```
+The preprocessing function you want to create needs to:
+
+1. Prefix the input with a prompt so T5 knows this is a translation task. Some models capable of multiple NLP tasks require prompting for specific tasks.
+2. Tokenize the input (English) and target (French) separately because you can't tokenize French text with a tokenizer pretrained on an English vocabulary.
+3. Truncate sequences to be no longer than the maximum length set by the max_length parameter.
+
+source_lang = "en"
+target_lang = "fr"
+prefix = "translate English to French: "
+
+```
+def preprocess_function(examples):
+    inputs = [prefix + example[source_lang] for example in examples["translation"]]
+    targets = [example[target_lang] for example in examples["translation"]]
+    model_inputs = tokenizer(inputs, text_target=targets, max_length=128, truncation=True)
+    return model_inputs
+```
+To apply the preprocessing function over the entire dataset, use datasets map method. We can speed up the ```map``` function by setting ```batched=True``` to process multiple elements of the dataset at once:
+
+```
+tokenized_books = books.map(preprocess_function, batched=True)
+```
+
+Now create a batch of examples using DataCollatorForSeq2Seq. It's more efficient to dynamically pad the sentences to the longest length in a batch during collation, instead of padding the whole dataset to the maximum length.
+
+```
+from transformers import DataCollatorForSeq2Seq
+data_collator = DataCollatorForSeq2Seq(tokenizer=tokenizer, model=checkpoint, return_tensors="tf")
+```
+
+### Step 3: Model performance evaluation </br>
+It is beneficial to assess your model's performance during training by incorporating a metric. You can efficiently integrate an evaluation method using the Evaluate library. Specifically, for this task, you should load the SacreBLEU metric. Refer to the Evaluate quick tour to understand how to load and compute a metric effectively.
+
+```
+import evaluate
+metric = evaluate.load("sacrebleu")
+```
+
+Then create a function that passes your predictions and labels to compute to calculate the SacreBLEU score:
+
+import numpy as np
 
 
+def postprocess_text(preds, labels):
+    preds = [pred.strip() for pred in preds]
+    labels = [[label.strip()] for label in labels]
 
+    return preds, labels
 
+```
+def compute_metrics(eval_preds):
+    preds, labels = eval_preds
+    if isinstance(preds, tuple):
+        preds = preds[0]
+    decoded_preds = tokenizer.batch_decode(preds, skip_special_tokens=True)
 
+    labels = np.where(labels != -100, labels, tokenizer.pad_token_id)
+    decoded_labels = tokenizer.batch_decode(labels, skip_special_tokens=True)
 
+    decoded_preds, decoded_labels = postprocess_text(decoded_preds, decoded_labels)
 
+    result = metric.compute(predictions=decoded_preds, references=decoded_labels)
+    result = {"bleu": result["score"]}
 
+    prediction_lens = [np.count_nonzero(pred != tokenizer.pad_token_id) for pred in preds]
+    result["gen_len"] = np.mean(prediction_lens)
+    result = {k: round(v, 4) for k, v in result.items()}
+    return result
+```
+Your ```compute_metrics``` function is ready to go now, and you'll return to it when you setup your training.
 
+### Step 4: Training your own model </br>
+
+####Load T5 with TFAutoModelForSeq2SeqLM:
+```
+from transformers import TFAutoModelForSeq2SeqLM
+model = TFAutoModelForSeq2SeqLM.from_pretrained(checkpoint)
+```
+
+Convert your datasets to the tf.data.Dataset format with prepare_tf_dataset():
+```
+tf_train_set = model.prepare_tf_dataset(
+    tokenized_books["train"],
+    shuffle=True,
+    batch_size=16,
+    collate_fn=data_collator,
+)
+
+tf_test_set = model.prepare_tf_dataset(
+    tokenized_books["test"],
+    shuffle=False,
+    batch_size=16,
+    collate_fn=data_collator,
+)
+```
+Configure the model for training with compile. Note that Transformers models all have a default task-relevant loss function, so you don't need to specify one unless you want to:
+
+```
+import tensorflow as tf
+model.compile(optimizer=optimizer)  # No loss argument!
+```
+
+We can start training our model! Call ```fit``` with your training and validation datasets, the number of epochs, and your callbacks to finetune the model:
+```
+model.fit(x=tf_train_set, validation_data=tf_test_set, epochs=3, "path/to/save/model")
+```
+
+### Step 5: Running inference on our trained model or on a pre-trained model </br>
+For T5, you need to prefix your input depending on the task you're working on. For translation from English to French, you should prefix your input as shown below:
+```
+text = "translate English to French: Legumes share resources with nitrogen-fixing bacteria."
+```
+The simplest way to try out our finetuned model or pre-trained model for inference is to use it in a pipeline(). Instantiate a pipeline for translation with your model, and pass your text to it:
+
+```
+from transformers import pipeline
+
+translator = pipeline("translation", model="my_awesome_opus_books_model")
+translator(text)
+```
+{'translation_text': 'Legumes partagent des ressources avec des bactéries azotantes.'}
+
+You can also manually replicate the results of the pipeline if you'd like:
+
+Tokenize the text and return the input_ids as TensorFlow tensors:
+
+from transformers import AutoTokenizer
+```
+tokenizer = AutoTokenizer.from_pretrained("my_awesome_opus_books_model")
+inputs = tokenizer(text, return_tensors="tf").input_ids
+```
 
 
 
