@@ -27,7 +27,6 @@ Instructions from hugging face: https://colab.research.google.com/github/hugging
 - missing module - ``` t5x.infer_unfragmented ``` which is used to start inference, it was deleted from the repository
 
 ## Hugging Face tutorial: 
-Naklonování repozitáře ```git clone https://github.com/google-research/t5x.git``` ✅
 
 ### Step 1: Installation of necessary libraries
 Installation of libraries that are often used in the development and evaluation of natural language processing models.
