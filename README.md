@@ -20,9 +20,8 @@ Below is a quick start guide for training models with TPUs on Google Cloud. For 
 Text-to-text-transfer-transformer (T5): https://github.com/google-research/text-to-text-transfer-transformer.git</br>
 Instructions from hugging face: https://colab.research.google.com/github/huggingface/notebooks/blob/main/transformers_doc/en/tensorflow/translation.ipynb
 
-#### Tento repozitář obsahuje neúspěšný pokus o spuštění inference na již natrénovaném T5X modelu s datovou sadou v TensorFlow "wmt_t2t_translate" - 
- #### ❌ Google Colab .ipynb 
-  #### ❌ Lokálně
+#### This repository contains a failed attempt to run inference on an already trained T5X model with the "wmt_t2t_translate" TensorFlow dataset, based on which I used the older T5.
+
 </br>
 
 ## Postup: 
