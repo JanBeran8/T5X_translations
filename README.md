@@ -44,11 +44,17 @@ Load the English-French subset of the OPUS Books dataset from the Datasets libra
 from datasets import load_dataset
 books = load_dataset("opus_books", "en-fr")
 ```
-
-
-
-
-
+Split the dataset into a train and test set with the train_test_split method. This method splits the dataset into two subsets: one for training the model and one for testing or evaluating its performance.
+```
+books = books["train"].train_test_split(test_size=0.2)
+```
+Example:
+```
+books["train"][0]
+```
+{'id': '21075',
+ 'translation': {'en': '“Why, Friday,” says I, “do you think they are going to eat them, then?” “Yes,” says Friday, “they will eat them.”',
+  'fr': "Je pus distinguer que l'un de ces trois faisait les gestes les plus passionnés, des gestes d'imploration, de douleur et de désespoir, allant jusqu'à une sorte d'extravagance."}}
 
 
 
