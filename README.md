@@ -39,8 +39,29 @@ pip install transformers datasets evaluate sacrebleu
 #### Step 2: Load OPUS Books dataset </br>
 Test the English-French T5 subset of the OPUS Books dataset and translate English text into French.
 
+Load the English-French subset of the OPUS Books dataset from the Datasets library:
+```
+from datasets import load_dataset
+books = load_dataset("opus_books", "en-fr")
+```
 
-- Cesta k kontrolnímu bodu modelu: cbqa/small_ssm_nq/model.ckpt-1110000
-- Soubor konfigurace modelu (Gin): models/t5_1_1_small.gin
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
