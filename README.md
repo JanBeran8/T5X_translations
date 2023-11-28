@@ -10,8 +10,10 @@ It is essentially a new and improved implementation of the T5 codebase (based on
 
 Below is a quick start guide for training models with TPUs on Google Cloud. For additional tutorials and background, see the complete documentation.
 
-# T5
+# T5 - The solution I used, T5X - broken modules.
 Link: https://github.com/google-research/text-to-text-transfer-transformer.git
+
+
 
 ### Časová osa:
 - [x] přiřazení osob, linky na github, data vystoupení (17.10.2023)
