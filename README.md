@@ -54,7 +54,7 @@ books["train"][0]
  'translation': {'en': '“Why, Friday,” says I, “do you think they are going to eat them, then?” “Yes,” says Friday, “they will eat them.”',
   'fr': "Je pus distinguer que l'un de ces trois faisait les gestes les plus passionnés, des gestes d'imploration, de douleur et de désespoir, allant jusqu'à une sorte d'extravagance."}}
 
-
+The next step is to load a T5 tokenizer to process the English-French language pairs:
 
 
 
