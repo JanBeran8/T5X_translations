@@ -12,7 +12,7 @@ Below is a quick start guide for training models with TPUs on Google Cloud. For 
 
 # T5 - The solution I used, T5X - broken modules.
 Text-to-text-transfer-transformer (T5): https://github.com/google-research/text-to-text-transfer-transformer.git
-Instructions from hugging face: https://colab.research.google.com/github/huggingface/notebooks/blob/main/transformers_doc/en/tensorflow/translation.ipynb
+</br>Instructions from hugging face: https://colab.research.google.com/github/huggingface/notebooks/blob/main/transformers_doc/en/tensorflow/translation.ipynb
 
 ### Časová osa:
 - [x] přiřazení osob, linky na github, data vystoupení (17.10.2023)
