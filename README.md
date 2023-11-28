@@ -25,7 +25,7 @@ Instructions from hugging face: https://colab.research.google.com/github/hugging
 ### T5X Startup Errors:
 - incomplete documentation
 - missing module - ``` t5x.infer_unfragmented ``` which is used to start inference, it was deleted from the repository
-</br>
+
 ## Hugging Face tutorial: 
 Naklonování repozitáře ```git clone https://github.com/google-research/t5x.git``` ✅
 
