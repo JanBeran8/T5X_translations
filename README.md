@@ -22,6 +22,10 @@ Instructions from hugging face: https://colab.research.google.com/github/hugging
 
 #### This repository contains a failed attempt to run inference on an already trained T5X model with the "wmt_t2t_translate" TensorFlow dataset, based on which I used the older T5 with HuggingFace's procedure.
 
+### T5X Startup Errors:
+- incomplete documentation
+- missing module - ``` t5x.infer_unfragmented ``` which is used to start inference, it was deleted from the repository
+
 </br>
 
 ## Postup: 
@@ -33,7 +37,4 @@ Pro spuštění inference na modelu potřebujete soubor konfigurace Gin, který 
 - Cesta k kontrolnímu bodu modelu: cbqa/small_ssm_nq/model.ckpt-1110000
 - Soubor konfigurace modelu (Gin): models/t5_1_1_small.gin
 
-### Chyby při lokálním spuštění: 
-- neúplná dokumentace
-- chybějící modul - ``` t5x.infer_unfragmented ```, který slouží ke spuštění inference, došlo k jeho smazání z repozitáře
 
