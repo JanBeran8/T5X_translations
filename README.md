@@ -31,12 +31,12 @@ Instructions from hugging face: https://colab.research.google.com/github/hugging
 ## Postup: 
 Naklonování repozitáře ```git clone https://github.com/google-research/t5x.git``` ✅
 
-#### Step 1: Installation of necessary libraries
+### Step 1: Installation of necessary libraries
 Installation of libraries that are often used in the development and evaluation of natural language processing models.
 ``` 
 pip install transformers datasets evaluate sacrebleu
 ```
-#### Step 2: Load OPUS Books dataset </br>
+### Step 2: Load OPUS Books dataset </br>
 Test the English-French T5 subset of the OPUS Books dataset and translate English text into French.
 
 Load the English-French subset of the OPUS Books dataset from the Datasets library:
